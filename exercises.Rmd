@@ -37,9 +37,9 @@ Have fun!
 cat("Exercises will be released as the course progresses")
 ```
 
-\  
-
 #### Section 1 Exercises
+
+\  
 
 ```{r, results='asis', eval = isTRUE(show_exercise)}
 ex_text <- c(": Getting to know R and RStudio", ": Basic R operations", 
@@ -69,11 +69,23 @@ rmarkdown::render("exercise_2.Rmd", output_format = "pdf_document", output_file 
 rmarkdown::render("exercise_3.Rmd", output_format = "pdf_document", output_file = "./exercises/exercise_3.pdf", quiet = TRUE)
 rmarkdown::render("exercise_4.Rmd", output_format = "pdf_document", output_file = "./exercises/exercise_4.pdf", quiet = TRUE)
 rmarkdown::render("exercise_5.Rmd", output_format = "pdf_document", output_file = "./exercises/exercise_5.pdf", quiet = TRUE)
+rmarkdown::render("graphical_data_exploration_exercise.Rmd", output_format = "pdf_document", output_file = "./exercises/graphical_data_exploration_exercise.pdf", quiet = TRUE)
+rmarkdown::render("linear_model_1_exercise.Rmd", output_format = "pdf_document", output_file = "./exercises/linear_model_1_exercise.pdf", quiet = TRUE)
+rmarkdown::render("linear_model_2_exercise.Rmd", output_format = "pdf_document", output_file = "./exercises/linear_model_2_exercise.pdf", quiet = TRUE)
 ```
 
 #### Section 2 Exercises
 
+\  
+
+ - [Graphical data Exploration exercise](graphical_data_exploration_exercise.html)
+
+ - [Linear model with single continuous explanatory variable exercise](linear_model_1_exercise.html)
+ 
+ - [Linear model with single categorical explanatory variable exercise](linear_model_2_exercise.html)
+
+
+\  
 
 [pdf version of exercises](exercise_pdf.html)
 
-[Exercise solutions](exercise_solutions.html)

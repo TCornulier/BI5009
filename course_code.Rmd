@@ -26,6 +26,10 @@ To download the solutions for each of the exercises as individual R scripts clic
 
 \  
 
+#### Section 1 Exercises
+
+\  
+
 ```{r sol12, results='asis', , eval = isTRUE(show_text12)}
 dir <- "exercise_solutions/"
 file_name <- list.files(dir) %>%
@@ -46,8 +50,10 @@ cat(sep="\n\n")
 dir <- "exercise_solutions/"
 file_name <- list.files(dir) %>%
              sort %>% 
-             grep("(exercise_[34]_solution.R|exercise_[34]_ggplot_solution.R)", . , value=TRUE) %>% 
-             .[c(1,3,2)]
+             # grep("(exercise_[34]_solution.R|exercise_[34]_ggplot_solution.R)", . , value=TRUE) %>% 
+             grep("(exercise_[34]_solution.R)", . , value=TRUE) %>%
+             # .[c(1,3,2)]
+             .[c(1,2)]
 
 link_name <- file_name %>%
             gsub("\\.R", "", .) %>%
@@ -59,11 +65,11 @@ paste0("- [", link_name, "](", "exercise_solutions/", file_name, ")") %>%
 cat(sep="\n\n")
 ```
 
-```{r sol56, results='asis', , eval = isTRUE(show_text56)}
+```{r sol5, results='asis', , eval = isTRUE(show_text5)}
 dir <- "exercise_solutions/"
 file_name <- list.files(dir) %>%
              sort %>% 
-             grep("(exercise_[56]_solution.R)", . , value=TRUE) 
+             grep("(exercise_[5]_solution.R)", . , value=TRUE) 
 
 link_name <- file_name %>%
             gsub("\\.R", "", .) %>%
@@ -72,5 +78,32 @@ link_name <- file_name %>%
             str_to_sentence(.)
 
 paste0("- [", link_name, "](", "exercise_solutions/", file_name, ")") %>%
+cat(sep="\n\n")
+```
+
+\  
+
+#### Section 2 Exercises
+
+\  
+
+```{r sol_GDE, results='asis', eval = isTRUE(show_text_GDE)}
+link_name <- "Graphical data exploration exercise"
+file_name <- "exercise_solutions/graphical_data_exploration_exercise_solutions.R"
+paste0("- [", link_name, "](", file_name, ")") %>%
+cat(sep="\n\n")
+```
+
+```{r sol_lm1, results='asis', eval = isTRUE(show_text_lm1)}
+link_name <- "Linear model with single continuous explanatory variable exercise"
+file_name <- "exercise_solutions/linear_model_1_exercise_solutions.R"
+paste0("- [", link_name, "](", file_name, ")") %>%
+cat(sep="\n\n")
+```
+
+```{r sol_lm2, results='asis', eval = isTRUE(show_text_lm2)}
+link_name <- "Linear model with single categorical explanatory variable exercise"
+file_name <- "exercise_solutions/linear_model_2_exercise_solutions.R"
+paste0("- [", link_name, "](", file_name, ")") %>%
 cat(sep="\n\n")
 ```
